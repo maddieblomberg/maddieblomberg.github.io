@@ -34,10 +34,7 @@ nav {
 
 main {
   padding: 2em;
-  text-align: left;
-  max width 800px;
-  margin auto;
-  line-height 1.6;
+  text-align: center;
 }
 
 .main-image {
@@ -61,4 +58,11 @@ main {
   text-decoration: none;
   font-size: 1.2em;
   border-radius: 5px;
+}
+.left-align {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  padding: 2em;
+  line-height: 1.6;
 }
