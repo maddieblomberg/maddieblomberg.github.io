@@ -15,9 +15,32 @@
     </div>
   </nav>
 
-  <main>
-    <h1>Get Started</h1>
-    <p>Text box</p>
-  </main>
+<main>
+  <h2>MANUAL</h2>
+  <p><em>*Start assuming that you have already accessed the HPCC, installed code, updated machine file, and compiled the code.</em></p>
+
+  <ol>
+    <li>Make a folder to run excitable in <code>$SCRATCH</code>. This will be the run directory.</li>
+    <li>Put files <code>"les3D-mp"</code>, <code>"input.gridx"</code>, <code>"input.gridy"</code>, and <code>"input.gridz"</code> in the run directory.</li>
+    <li>Copy the run-time parameter file, <code>"les3D-mp.par"</code> to the run directory</li>
+    <li>Create folders in run directory called <code>"Restart"</code> and <code>"Snap"</code></li>
+    <li>Open <code>"les3D-mp.par"</code> and edit run-time parameters</li>
+    <li>Run the job using 1 core (non-parallel) <code>$. /les3d-mp</code></li>
+    <li>During the run, <code>"logfile"</code> and <code>"history"</code> are created.
+      <ol type="a">
+        <li>You can monitor the run with <code>"logfile"</code> using <code>$ tail logfile</code> in another command window</li>
+        <li>You can monitor the velocity, turbulent kinetic energy (TKE), and wall-shear stress value (averaged along centerline) using GNUPLOT to read the history file: <br><code>$ gnuplot</code></li>
+      </ol>
+    </li>
+  </ol>
+
+  <h2>Post Processing using Jupyter Notebook</h2>
+  <ol>
+    <li>Make sure all snapshots are in one folder</li>
+    <li>Make sure subfolders follow naming conventions, and create necessary folders to ‘catch’ new data</li>
+    <li>Execute each cell with code or press play on the top of the notebook</li>
+    <li>It may take several minutes to process (wait at least 5–10 minutes before suspecting an error)</li>
+  </ol>
+</main>
 </body>
 </html>
